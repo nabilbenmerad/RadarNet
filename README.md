@@ -41,27 +41,19 @@ Estimated optical flow:
 3. <strong>Forecasting:</strong> Built in forecasting routine to produce 50 min forecast sequences.
 
 
-## API
+## Usage
+###1) Training :
+In order to train a model on your data, run the train.py script, The following commande line arguments can be passed :
+-arch : Neural network architecture to be used. Use 'scd' to train a Soft Convolution Deconvolution architecture.
+-b : Batch size
+-e : Number of epochs
+-op : Optimizer. Use 'Adam' to use the Adam optimizer, 'SGD' to use the stochastic gradient descent optimizer.
+<strong>Example</strong> : python train.py -arch scd -b 512 -e 300 -op Adam
+<strong>Output</strong> : 
+- Your model's weights will be saved in a file inside the 'Models' folder.
+- The Visdom window shows the progress of the loss real-time for every epoch
 
-Create a new vehicle and set it to self-driving mode is extremely easy:
-
-	#Load self-driving pre trained model
-    model, graph = load_autopilot('autopilot.hdf5')
-
-    # Create Axionaut car with default settings
-    axionaut = vehicles.Axionaut()
-
-    # Configure PDW control commands as default
-    axionaut.commands = get_commands(path=None, default=True)
-
-    # Test camera position
-    axionaut.camera_test()
-
-    # Set vehicle to auto pilot mode 
-    axionaut.autopilot(model, graph)
-
-    # Start car   
-    axionaut.start()
+###1) Visualization :
 
 ## Code Exemple
 

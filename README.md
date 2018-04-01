@@ -13,7 +13,7 @@ PEP 8 -- Style Guide for Python Code.
 
 
 ## Screenshot
-!
+![alt text](/Photos/real_sequence_example.png)
 
 ## Tech/framework used
 

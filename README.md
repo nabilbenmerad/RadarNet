@@ -3,10 +3,7 @@ Deep Learning Convolutional-Deconvolutional framework to short-term climate fore
 
 
 ## Introduction
-RadarNet provides a 
-
-Axionaut is intended for rapid experimentation, use the built-in Deep Learning architectures and start driving!
-
+RadarNet implements of a Convolution Deconvolution Neural Network (CDNN) to short-term forecasting of precipitation and estimate the advection field using the CDNN architecture and obtain future maps by applying warping techniques. 
 
 ## Code style
 PEP 8 -- Style Guide for Python Code.
@@ -36,7 +33,7 @@ Estimated optical flow:
 
 ## Features
 
-1. <strong>Training mode:</strong> Easy model training with built-in database.
+1. <strong>Training:</strong> Model training with built-in database.
 2. <strong>Visualization:</strong> Real time visualization of training Losses.
 3. <strong>Forecasting:</strong> Built in forecasting routine to produce 50 min forecast sequences.
 
@@ -54,21 +51,22 @@ In order to train a model on your data, run the train.py script, The following c
 - The Visdom window shows the progress of the loss real-time for every epoch
 
 <h3>1) Visualization :</h3>
+To make some predictions with the just trained model, we can run the viz.py script to :</br>
+-arch : Neural network architecture to be used. Use 'scd' if you are loading a models that have been trained on a Soft Convolution Deconvolution architecture.</br>
+-s : Data index to start the forecasts from.</br>
+-c : Number of forecasts to do.</br>
+-seq : Should be put to 1 if we want to visualize a continious sequence of forecasts with autoregression, and 0 if we want to have indivudual one forecasts for every input.</br>
 
-
-## Installation
-<strong>Clone repository to your laptop:</strong>
-`git clone https://github.com/nabimaru/RadarNet`
-
-<strong>Install packages:</strong>
-`pip install -r laptop_requirements.txt`
-
+<strong>Example</strong> : python viz.py -arch scd -s 600 -c 7 -seq 1</br>
+<strong>Output</strong> : </br>
+- The Visdom window shows the real maps that should be predicted alongside the forecasts starting from '-s' untill '-s' + '-c'
 
 ## Status
 RadarNet is currently under developement.
 
 ## Contribute
 RadarNet is totally free and open for everyone to use, please feel free to contribute!
-
+<strong>Clone repository to your laptop:</strong>
+`git clone https://github.com/nabimaru/RadarNet`
 
 

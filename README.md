@@ -1,9 +1,9 @@
 ## RadarNet
-Deep Learning Convolutional-Deconvolutional Framework to short-term Climate Forecasting
+Deep Learning Convolutional-Deconvolutional Framework to short-term Climate Forecasting.
 
 
 ## Introduction
-RadarNet implements of a Convolutional-Deconvolutional Neural Network (CDNN) to short-term precipitation forecasting. Also provides an estimation of the advection field by using optical flow. 
+RadarNet implements of a Convolutional-Deconvolutional Neural Network (CDNN) to short-term precipitation forecasting, also provides an estimation of the advection field by using optical flow. 
 
 RadarNet is intended to rapid implementation and testing of Deep Learning architectures to Climate Research. Please refer to documentation for more information.
 
@@ -48,9 +48,17 @@ Estimated optical flow:
 
 ## Usage
 1. ### Training:
-To train a model with your own data use the `train.py` script. The following command line arguments can be passed:  <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.  <strong>-b:</strong> Batch size.  <strong>-e:</strong> Number of epochs.  <strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.  
+To train a model with your own data use the `train.py` script. The following command line arguments can be passed:  
 
-<strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`&nbsp;
+<strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.  
+
+<strong>-b:</strong> Batch size.  
+
+<strong>-e:</strong> Number of epochs.  
+
+<strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.  
+
+<strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`
 
 <strong>Output</strong>:
 
@@ -71,7 +79,7 @@ To generate and visualize predictions with your model, run the `viz.py` script w
 <strong>Example:</strong> `python viz.py -arch scd -s 600 -c 7 -seq 1`
 
 <strong>Output:</strong>  
-- Visdom server window shows the both target and predicted maps starting from example '-s' untill '-s' + '-c'.
+- Visdom server window shows the both target and predicted maps starting from example `-s` until `-s` + `-c`.
 
 ## Status
 RadarNet is currently under developement.

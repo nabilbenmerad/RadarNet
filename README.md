@@ -79,7 +79,7 @@ To generate and visualize predictions with your model, run the `viz.py` script w
 <strong>Example:</strong> `python viz.py -arch scd -s 600 -c 7 -seq 1`
 
 <strong>Output:</strong>  
-- Visdom server window shows the both target and predicted maps starting from example `-s` until `-s` + `-c`.
+- [Visdom](https://github.com/facebookresearch/visdom) server window shows the both target and predicted maps starting from example `-s` until `-s` + `-c`.
 
 ## Status
 RadarNet is currently under developement.

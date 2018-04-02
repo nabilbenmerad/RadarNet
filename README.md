@@ -3,7 +3,7 @@ Deep Learning Convolutional-Deconvolutional Framework to short-term Climate Fore
 
 
 ## Introduction
-RadarNet implements of a Convolutional-Deconvolutional Neural Network (CDNN) to short-term precipitation forecasting, also provides an estimation of the advection field by using optical flow. 
+RadarNet implements of a Convolutional-Deconvolutional Neural Network (CDNN) to short-term precipitation forecasting. The architecture also provides an estimation of the advection field by using optical flow. 
 
 RadarNet is intended to rapid implementation and testing of Deep Learning architectures to Climate Research. Please refer to documentation for more information.
 
@@ -56,14 +56,14 @@ To train a model with your own data use the `train.py` script. The following com
 
 <strong>-e:</strong> Number of epochs.  
 
-<strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.  
+<strong>-op:</strong> Optimizer, insert `Adam` to use the Adam optimizer, `SGD` to stochastic gradient descent.  
 
 <strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`
 
 <strong>Output</strong>:
 
 - Model's weights are saved in a file inside the `Models/` folder.
-- Visdom visualization server shows the progress of the loss real-time for every epoch
+- [Visdom](https://github.com/facebookresearch/visdom) visualization server shows in real-time the progress of the loss for every epoch.
 
 2. ### Visualization:
 To generate and visualize predictions with your model, run the `viz.py` script with the following commands:

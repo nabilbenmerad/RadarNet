@@ -49,10 +49,7 @@ Estimated optical flow:
 ## Usage
 1. ### Training:
 To train a model with your own data use the `train.py` script. The following command line arguments can be passed:
-<strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.&nbsp;
-<strong>-b:</strong> Batch size.&nbsp;
-<strong>-e:</strong> Number of epochs.&nbsp;
-<strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.&nbsp;
+<strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.  <strong>-b:</strong> Batch size.  <strong>-e:</strong> Number of epochs.  <strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.  
 
 <strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`&nbsp;
 

@@ -59,16 +59,16 @@ To train a model with your own data use the `train.py` script. The following com
 - Model's weights are saved in a file inside the `Models/` folder.
 - Visdom visualization server shows the progress of the loss real-time for every epoch
 
-2. <strong>Visualization:</strong>
+2. ### Visualization:
 To generate and visualize predictions with your model, run the `viz.py` script with the following commands:</br>
 <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' when using Soft Convolution Deconvolution architecture.</br>
 <strong>-s:</strong> Starting sequence index from data provided *default=0*.</br>
 <strong>-c:</strong> Number of maps to predict *5-minutes forecasting each*.</br>
 <strong>-seq:</strong> Type of sequence. Set to 1 to visualize a continuous map sequence with autoregression, 0 to indivudual forecasting for every input.</br>
 
-<strong>Example</strong> : `python viz.py -arch scd -s 600 -c 7 -seq 1`</br>
-<strong>Output</strong> : </br>
-- The Visdom server window shows the both target and predicted maps starting from example '-s' untill '-s' + '-c'.
+<strong>Example:</strong> `python viz.py -arch scd -s 600 -c 7 -seq 1`
+<strong>Output:</strong>  
+- Visdom server window shows the both target and predicted maps starting from example '-s' untill '-s' + '-c'.
 
 ## Status
 RadarNet is currently under developement.

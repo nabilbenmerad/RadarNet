@@ -24,6 +24,8 @@ import losses as losses
 import flowlib as flow
 import plot as flow_plot
 
+
+# Please copy your IP adress on 'server' attribute
 viz = visdom.Visdom(server='http://xxx.xxx.xxx.xxx', env='viz_preds')
 
 dataset_4x_1y_path = 'Data/4x_1y_dataset_non-norm/'

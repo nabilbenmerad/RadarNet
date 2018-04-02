@@ -41,19 +41,25 @@ Estimated optical flow:
 3. <strong>Forecasting:</strong> Built in forecasting routine to produce 50 min forecast sequences.
 
 
+## Installation
+<strong>Clone repository:</strong>
+`git clone https://github.com/nabimaru/RadarNet`
+
+
 ## Usage
-<h3>1) Training :</h3>
-In order to train a model on your data, run the train.py script, The following command line arguments can be passed :</br>
+1. ### Training:
+To train a model with your own data use the `train.py` script. The following command line arguments can be passed:
 <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.</br>
 <strong>-b:</strong> Batch size.</br>
 <strong>-e:</strong> Number of epochs.</br>
 <strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.</br>
-<strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`</br>
+
+<strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`
 <strong>Output</strong>: </br>
 - Model's weights are saved in a file inside the `Models/` folder.
 - Visdom visualization server shows the progress of the loss real-time for every epoch
 
-<h3>1) Visualization :</h3>
+2. <strong>Visualization:</strong>
 To generate and visualize predictions with your model, run the `viz.py` script with the following commands:</br>
 <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' when using Soft Convolution Deconvolution architecture.</br>
 <strong>-s:</strong> Starting sequence index from data provided *default=0*.</br>
@@ -69,7 +75,5 @@ RadarNet is currently under developement.
 
 ## Contribute
 RadarNet is totally free and open for everyone to use, please feel free to contribute!
-<strong>Clone repository to your laptop:</strong>
-`git clone https://github.com/nabimaru/RadarNet`
 
 

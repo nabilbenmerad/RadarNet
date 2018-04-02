@@ -51,23 +51,33 @@ Estimated optical flow:
 To train a model with your own data use the `train.py` script. The following command line arguments can be passed:
 
 <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution Deconvolution architecture.
+
 <strong>-b:</strong> Batch size.
+
 <strong>-e:</strong> Number of epochs.
+
 <strong>-op:</strong> Optimizer, insert 'Adam' to use the Adam optimizer, 'SGD' to stochastic gradient descent.
 
 <strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`
-<strong>Output</strong>: </br>
+
+<strong>Output</strong>:
+
 - Model's weights are saved in a file inside the `Models/` folder.
 - Visdom visualization server shows the progress of the loss real-time for every epoch
 
 2. ### Visualization:
 To generate and visualize predictions with your model, run the `viz.py` script with the following commands:
+
 <strong>-arch:</strong> Neural network architecture to be used. Use 'scd' when using Soft Convolution Deconvolution architecture.
+
 <strong>-s:</strong> Starting sequence index from data provided *default=0*.
+
 <strong>-c:</strong> Number of maps to predict *5-minutes forecasting each*.
+
 <strong>-seq:</strong> Type of sequence. Set to 1 to visualize a continuous map sequence with autoregression, 0 to indivudual forecasting for every input.
 
 <strong>Example:</strong> `python viz.py -arch scd -s 600 -c 7 -seq 1`
+
 <strong>Output:</strong>  
 - Visdom server window shows the both target and predicted maps starting from example '-s' untill '-s' + '-c'.
 

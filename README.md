@@ -1,9 +1,8 @@
 ## RadarNet
-Deep Learning Convolutional-Deconvolutional framework to short-term climate forecasting
+Deep Learning Convolutional-Deconvolutional Framework to short-term Climate Forecasting.
 
 
 ## Introduction
-RadarNet implements of a Convolution Deconvolution Neural Network (CDNN) to short-term forecasting of precipitation and estimate the advection field using the CDNN architecture and obtain future maps by applying warping techniques. 
 
 ## Code style
 PEP 8 -- Style Guide for Python Code.
@@ -34,39 +33,60 @@ Estimated optical flow:
 ## Features
 
 1. <strong>Training:</strong> Model training with built-in database.
-2. <strong>Visualization:</strong> Real time visualization of training Losses.
+2. <strong>Visualization:</strong> Real time visualization of training losses.
 3. <strong>Forecasting:</strong> Built in forecasting routine to produce 50 min forecast sequences.
 
 
+## Installation
+<strong>Clone repository:</strong>
+`git clone https://github.com/nabimaru/RadarNet`
+
+
 ## Usage
-<h3>1) Training :</h3>
-In order to train a model on your data, run the train.py script, The following commande line arguments can be passed :</br>
--arch : Neural network architecture to be used. Use 'scd' to train a Soft Convolution Deconvolution architecture.</br>
--b : Batch size.</br>
--e : Number of epochs.</br>
--op : Optimizer. Use 'Adam' to use the Adam optimizer, 'SGD' to use the stochastic gradient descent optimizer.</br>
-<strong>Example</strong> : python train.py -arch scd -b 512 -e 300 -op Adam</br>
-<strong>Output</strong> : </br>
-- Your model's weights will be saved in a file inside the 'Models' folder.
-- The Visdom window shows the progress of the loss real-time for every epoch
+1. ### Training:
+To train a new model with your own data use the `train.py` script. The following command line arguments can be passed:  
 
-<h3>1) Visualization :</h3>
-To make some predictions with the just trained model, we can run the viz.py script to :</br>
--arch : Neural network architecture to be used. Use 'scd' if you are loading a models that have been trained on a Soft Convolution Deconvolution architecture.</br>
--s : Data index to start the forecasts from.</br>
--c : Number of forecasts to do.</br>
--seq : Should be put to 1 if we want to visualize a continious sequence of forecasts with autoregression, and 0 if we want to have indivudual one forecasts for every input.</br>
+<strong>-arch:</strong> Neural network architecture to be used. Use 'scd' to train the default Convolution-Deconvolution architecture.  
 
-<strong>Example</strong> : python viz.py -arch scd -s 600 -c 7 -seq 1</br>
-<strong>Output</strong> : </br>
-- The Visdom window shows the real maps that should be predicted alongside the forecasts starting from '-s' untill '-s' + '-c'
+<strong>-b:</strong> Batch size.  
+
+<strong>-e:</strong> Number of epochs.  
+
+<strong>-op:</strong> Optimizer, insert `Adam` to use the Adam optimizer, `SGD` to stochastic gradient descent.  
+
+<strong>Example of code</strong> : `python train.py -arch scd -b 512 -e 300 -op Adam`
+
+<strong>Output</strong>:
+
+- Model's weights are saved in a file inside the `Models/` folder.
+- [Visdom](https://github.com/facebookresearch/visdom) visualization server shows real-time progress of training and validation loss for every epoch.
+
+2. ### Visualization:
+To generate and visualize predictions with your model, run the `viz.py` script with the following commands:
+
+<strong>-arch:</strong> Neural network architecture to be used. Use 'scd' when using Soft Convolution Deconvolution architecture.
+
+<strong>-s:</strong> Starting sequence index from data provided *default=0*.
+
+<strong>-c:</strong> Number of maps to predict *5-minutes forecasting each*.
+
+<strong>-seq:</strong> Type of sequence. Set to 1 to visualize a continuous map sequence with autoregression, 0 to indivudual forecasting for every input.
+
+<strong>Example:</strong> `python viz.py -arch scd -s 600 -c 7 -seq 1`
+
+<strong>Output:</strong>  
+- [Visdom](https://github.com/facebookresearch/visdom) server plots both target and predicted maps.
 
 ## Status
 RadarNet is currently under developement.
 
 ## Contribute
+<<<<<<< HEAD
 RadarNet is totally free and open for everyone to use, please feel free to contribute! </br>
 <strong>Clone repository to your laptop:</strong>
 `git clone https://github.com/nabimaru/RadarNet`
+=======
+RadarNet is totally free and open for everyone to use, please feel free to contribute!
+>>>>>>> 22180db2f8628c7150000fa328824d1d7fc642c4
 
 

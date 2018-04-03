@@ -25,7 +25,7 @@ import flowlib as flow
 import plot as flow_plot
 from scipy.misc import imresize
 
-# You're IP adress must go in the 'server' attribute
+# Please copy your IP adress on 'server' attribute
 viz = visdom.Visdom(server='http://xxx.xxx.xxx.xxx', env='train_losses') 
 
 dataset_4x_1y_path = 'Data/4x_1y_corrected/'

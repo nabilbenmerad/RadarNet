@@ -85,12 +85,8 @@ To generate and visualize predictions with your model, run the `viz.py` script w
 RadarNet is currently under developement.
 
 ## Contribute
-<<<<<<< HEAD
 RadarNet is totally free and open for everyone to use, please feel free to contribute! </br>
 <strong>Clone repository to your laptop:</strong>
 `git clone https://github.com/nabimaru/RadarNet`
 =======
 RadarNet is totally free and open for everyone to use, please feel free to contribute!
->>>>>>> 22180db2f8628c7150000fa328824d1d7fc642c4
-
-

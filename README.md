@@ -65,7 +65,7 @@ To make some predictions with the just trained model, we can run the viz.py scri
 RadarNet is currently under developement.
 
 ## Contribute
-RadarNet is totally free and open for everyone to use, please feel free to contribute!
+RadarNet is totally free and open for everyone to use, please feel free to contribute! </br>
 <strong>Clone repository to your laptop:</strong>
 `git clone https://github.com/nabimaru/RadarNet`
 

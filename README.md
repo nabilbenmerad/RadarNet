@@ -3,6 +3,10 @@ Deep Learning Convolutional-Deconvolutional Framework to short-term Climate Fore
 
 
 ## Introduction
+RadarNet implements a Convolutional-Deconvolutional Neural Network (CDNN) to short-term precipitation forecasting. The architecture also provides an estimation of the advection field by using optical flow. 
+
+RadarNet is intended to rapid implementation and testing of Deep Learning architectures to Climate Research. Please refer to documentation for more information.
+
 
 ## Code style
 PEP 8 -- Style Guide for Python Code.

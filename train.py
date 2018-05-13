@@ -64,11 +64,6 @@ print('Dataset Loaded...')
 print('X shape = ', np.shape(x_denorm))
 print('Y shape = ', np.shape(y_denorm))
 
-# Normalize x and y
-max_val = np.max(x_denorm)
-mean_val = np.mean(x_denorm)
-std_val = np.std(x_denorm)
-
 x = x_denorm
 y = y_denorm
 
@@ -267,7 +262,7 @@ print('Average test rmse=',np.mean(np.array(test_error)))
 
 
 # Save the model
-torch.save(model.state_dict(), models_path+'OP-{}_BS-{}EP-{}_LR-{}'.format(args.optimizer, args.batch_size, args.epochs, 50.0001))
+torch.save(model.state_dict(), models_path+'_OP-{}_BS-{}EP-{}_LR-{}'.format(args.optimizer, args.batch_size, args.epochs, 50.0001))
 
 # Plot error
 plt.plot(losses,label='Train loss')
